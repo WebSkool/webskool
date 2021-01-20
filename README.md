@@ -17,15 +17,17 @@ git
 
 ### Instalación 🔧
 
-_clona el repositorio_
+* clona el repositorio
 
 ```
 git clone https://github.com/EliMacMun/SocialNotebook.git
 ```
 
-## Ejecutando las pruebas ⚙️
+## Ejecución ⚙️
 
 * Abre el archivo index.html
+Ó
+* En su defecto puedes visitar directamente la [página temporal](https://elimacmun.github.io/SocialNotebook/)
 
 ## Tecnologias utilizadas 🛠️
 
