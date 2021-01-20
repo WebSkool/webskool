@@ -25,8 +25,8 @@ git clone https://github.com/EliMacMun/SocialNotebook.git
 
 ## Ejecución ⚙️
 
-* Abre el archivo index.html
-Ó
+* Puedes instalar el proyecto para pruebas locales
+** Abre el archivo index.html
 * En su defecto puedes visitar directamente la [página temporal](https://elimacmun.github.io/SocialNotebook/)
 
 ## Tecnologias utilizadas 🛠️
