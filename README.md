@@ -1,4 +1,4 @@
-# SocialNotebook
+# WebSkool
 
 Una aplicación que ayudara a impartir y gestionar la educación tanto a distancia como presencial con herramientas para maestros, alumnos y administradores
 
@@ -20,7 +20,7 @@ git
 * clona el repositorio
 
 ```
-git clone https://github.com/EliMacMun/SocialNotebook.git
+git clone https://github.com/EliMacMun/WebSkool.git
 ```
 
 ## Ejecución ⚙️
@@ -28,7 +28,7 @@ git clone https://github.com/EliMacMun/SocialNotebook.git
 * Puedes instalar el proyecto para pruebas locales
   * Abre el archivo index.html
 
-* En su defecto puedes visitar directamente la [página temporal](https://elimacmun.github.io/SocialNotebook/)
+* En su defecto puedes visitar directamente la [página temporal](https://elimacmun.github.io/WebSkool/)
 
 ## Tecnologias utilizadas 🛠️
 
