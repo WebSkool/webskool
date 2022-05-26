@@ -2,7 +2,7 @@
 
 Una aplicación que ayudara a impartir y gestionar la educación tanto a distancia como presencial con herramientas para maestros, alumnos y administradores
 
-## Comenzando 🚀
+<!-- ## Comenzando 🚀
 
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 Por el momento solo se están creando las interfaces asi que la instalación será facil
@@ -36,7 +36,7 @@ git clone https://github.com/EliMacMun/WebSkool.git
 * CSS3 - Estilos de interfaces
 * JavaScript - Funciones de interfaces
 * [Bootstrap](https://getbootstrap.com/) - Estilos y Estructura de interfaces
-* [Google Fonts](https://fonts.google.com/) - Fuentes
+* [Google Fonts](https://fonts.google.com/) - Fuentes -->
 
 ## Autor ✒️
 
