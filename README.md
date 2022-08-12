@@ -40,7 +40,7 @@ git clone https://github.com/EliMacMun/WebSkool.git
 
 ## Autor ✒️
 
-* **Elí Maciel** - *Desarrollo* - [EliMacMun](https://github.com/EliMacMun)
+* **Elí Maciel** - *Desarrollo* - [eliyya](https://github.com/EliMacMun)
 
 ## Contrubuyentes ✒️
 
