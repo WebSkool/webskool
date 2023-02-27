@@ -1,0 +1,36 @@
+body {
+    max-width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #0f0f0f;
+    margin: 0;
+}
+
+.classList {
+    background: rgb(87, 87, 85);
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 10px;
+    margin: 0;
+    gap: 20px;
+    overflow-x: scroll;
+}
+
+nav {
+    display: flex;
+}
+div li {
+    display: block;
+
+    /* width: 90px; */
+}
+.classpfp {
+    width: 50px;
+}
+
+.classpfp img {
+    border-radius: 30px;
+}
