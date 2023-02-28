@@ -37,7 +37,7 @@ const getClasses = async (limit = 5) => {
 }
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
-    const pfps = await getClasses(20)
+    const pfps = await getClasses(30)
 
     return (
         <html lang="en">

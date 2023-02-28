@@ -20,8 +20,10 @@ main {
 }
 
 form {
-    max-width: 400px;
+    min-width: 400px;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.15);
@@ -36,9 +38,8 @@ h1 {
 }
 
 input {
-    width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 0 20px 20px 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background: #eeeeee25;
@@ -64,4 +65,10 @@ p {
 
 a {
     color: #fff;
+}
+
+@media screen and (max-width: 400px) {
+    form {
+        min-width: 100%;
+    }
 }

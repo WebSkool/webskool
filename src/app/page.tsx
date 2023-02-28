@@ -4,7 +4,7 @@ import './styles.css'
 export default function Home() {
     return (
         <main>
-            <head>
+            <header>
                 <nav>
                     <ul>
                         <li>
@@ -12,7 +12,7 @@ export default function Home() {
                         </li>
                     </ul>
                 </nav>
-            </head>
+            </header>
         </main>
     )
 }
