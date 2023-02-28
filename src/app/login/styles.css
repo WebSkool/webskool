@@ -6,7 +6,6 @@ secondary: #2D27FF;
 body {
     background: url(https://cdn.pixabay.com/photo/2016/11/29/04/19/ocean-1867285_960_720.jpg) no-repeat;
     background-size: cover;
-
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
 }
@@ -26,7 +25,7 @@ form {
     border-radius: 5px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(50px);
 }
 
 h1 {
