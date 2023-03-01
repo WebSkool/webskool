@@ -1,31 +1,32 @@
 body {
     max-width: 100vw;
+    max-height: 100vh;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #0f0f0f;
     margin: 0;
 }
-
 .classList {
-    background: rgb(87, 87, 85);
+    background: rgb(232, 232, 87);
+    height: 100vw;
+    top: -104%;
     list-style: none;
     display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 46%;
+    transform: rotate(-90deg);
     flex-wrap: nowrap;
-    flex-direction: row;
+    flex-direction: column;
     padding: 10px;
     margin: 0;
     gap: 20px;
-    overflow-x: scroll;
+    overflow-y: scroll;
 }
 
 nav {
     display: flex;
 }
-div li {
-    display: block;
-
-    /* width: 90px; */
+.classicon {
+    transform: rotate(90deg);
 }
 .classpfp {
     width: 50px;

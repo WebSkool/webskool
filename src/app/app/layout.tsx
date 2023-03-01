@@ -37,7 +37,7 @@ const getClasses = async (limit = 5) => {
 }
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
-    const pfps = await getClasses(20)
+    const pfps = await getClasses(30)
 
     return (
         <html lang="en">
@@ -45,7 +45,10 @@ export default async function AppLayout({ children }: { children: React.ReactNod
                 <header>
                     <ul className="classList">
                         {pfps.map((pfp: any, i) => (
-                            <li key={i}>
+                            <li
+                                className="classicon"
+                                key={i}
+                            >
                                 <Link href={'/app/class/' + i}>
                                     <div className="classpfp">
                                         <Image
