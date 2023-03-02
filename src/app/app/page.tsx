@@ -5,9 +5,21 @@ import './styles.css'
 export default async function App() {
     return (
         <main>
-            <nav>
-                <ul>
-                    <li>
+            <nav className="menu-navegacion">
+                <ul className="menu">
+                    <li className="lista-menu">
+                        <Link href="/app">
+                            {/* <Image
+                                src={pfp.picture.thumbnail}
+                                alt="Picture of the author"
+                                width={50}
+                                height={50}
+                                layout="responsive"
+                            /> */}
+                            Inicio
+                        </Link>
+                    </li>
+                    <li className="lista-menu">
                         <Link href="/app">
                             {/* <Image
                                 src={pfp.picture.thumbnail}
@@ -21,6 +33,7 @@ export default async function App() {
                     </li>
                 </ul>
             </nav>
+            <section></section>
         </main>
     )
 }
