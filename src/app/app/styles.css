@@ -22,4 +22,8 @@ main {
 .menu {
     list-style: none;
     padding: 20px;
+    padding-bottom: 20px;
+}
+.lista-menu {
+    padding: 20px;
 }

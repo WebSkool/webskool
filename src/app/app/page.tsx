@@ -7,7 +7,7 @@ export default async function App() {
         <main>
             <nav className="menu-navegacion">
                 <ul className="menu">
-                    <li>
+                    <li className="lista-menu">
                         <Link href="/app">
                             {/* <Image
                                 src={pfp.picture.thumbnail}
@@ -19,7 +19,7 @@ export default async function App() {
                             Inicio
                         </Link>
                     </li>
-                    <li>
+                    <li className="lista-menu">
                         <Link href="/app">
                             {/* <Image
                                 src={pfp.picture.thumbnail}
