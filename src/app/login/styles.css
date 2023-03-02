@@ -5,6 +5,7 @@ secondary: #2D27FF;
 
 body {
     background: url(https://cdn.pixabay.com/photo/2016/11/29/04/19/ocean-1867285_960_720.jpg) no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
@@ -18,16 +19,34 @@ main {
     justify-content: center;
     align-items: center;
 }
-
 form {
     min-width: 400px;
-    padding: 40px;
+    /* padding: 40px; */
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(50px);
+}
+
+form div {
+    margin: 10px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form div label {
+    position: absolute;
+    padding: 10px;
+    transition: 0.5 ease;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #eeeeee25;
+    outline: none;
 }
 
 h1 {
@@ -36,25 +55,25 @@ h1 {
     color: #fff;
     font-size: 30px;
 }
-
-input {
-    padding: 10px;
-    margin: 0 20px 20px 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background: #eeeeee25;
-    outline: none;
-}
 input::placeholder {
-    color: #ffffff83;
+    color: #fffcfc4a;
 }
+
+div:has(input:focus) label {
+    transform: translateY(-31px);
+    padding: 10px 0;
+}
+
 input[type='submit'] {
+    margin: 0 20px 20px 20px;
+    border: none;
     background: #f6f2f278;
-    transition: 0.3 ease;
+    /*filter: blur(5px); "boton desactivado "*/
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
-    color: #fff;
 }
+
 input[type='submit']:active {
     background: #eeeeee25;
 }
@@ -71,4 +90,19 @@ a {
     form {
         min-width: 100%;
     }
+}
+
+.inactive {
+    filter: blur(3px);
+    pointer-events: none;
+}
+
+.error {
+    color: red;
+    margin: 0;
+}
+
+.inputUsed {
+    transform: translateY(-30px);
+    padding: 10px 0;
 }

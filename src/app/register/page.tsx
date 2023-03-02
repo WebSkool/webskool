@@ -51,37 +51,40 @@ export default function Register() {
             <form action="/api/signup" onSubmit={handleSubmit} method="post">
                 <h1>Register</h1>
                 <div>
-                    <label htmlFor="email">email</label>
                     <input
                         type="email"
                         name="email"
-                        placeholder="email@example.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
+                    <label htmlFor="email" className={email ? 'inputUsed' : ''}>
+                        email
+                    </label>
                 </div>
                 <div>
-                    <label htmlFor="password">password</label>
                     <input
                         type="password"
                         name="password"
-                        placeholder="***********"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
                     />
+                    <label htmlFor="password" className={password ? 'inputUsed' : ''}>
+                        password
+                    </label>
                 </div>
                 <div>
-                    <label htmlFor="repeat">repeat password</label>
                     <input
                         type="password"
                         name="repeat"
-                        placeholder="***********"
                         value={repeat}
                         onChange={(e) => setRepeat(e.target.value)}
                         required
                     />
+                    <label htmlFor="repeat" className={repeat ? 'inputUsed' : ''}>
+                        repeat password
+                    </label>
                 </div>
                 <input
                     type="submit"

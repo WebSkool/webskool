@@ -26,22 +26,30 @@ export default function Login() {
         <main>
             <form onSubmit={onSubmit}>
                 <h1>Login</h1>
-                <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    name="email"
-                    placeholder="email@example.com"
-                    required
-                />
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    name="password"
-                    placeholder="***********"
-                    required
-                />
+                <div>
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        name="email"
+                        required
+                    />
+                    <label htmlFor="email" className={email ? 'inputUsed' : ''}>
+                        email
+                    </label>
+                </div>
+                <div>
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        name="password"
+                        required
+                    />
+                    <label htmlFor="password" className={password ? 'inputUsed' : ''}>
+                        password
+                    </label>
+                </div>
                 <input type="submit" value="Sig In" />
                 <p>
                     {"Don't have an account yet? "}

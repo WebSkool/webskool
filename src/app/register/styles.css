@@ -21,7 +21,7 @@ main {
 }
 form {
     min-width: 400px;
-    padding: 40px;
+    /* padding: 40px; */
     display: flex;
     flex-direction: column;
     border-radius: 20px;
@@ -29,9 +29,20 @@ form {
     backdrop-filter: blur(50px);
 }
 
+form div {
+    margin: 10px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form div label {
+    position: absolute;
+    padding: 10px;
+    transition: 0.5 ease;
+}
+
 input {
     padding: 10px;
-    margin: 0 20px 20px 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background: #eeeeee25;
@@ -44,21 +55,17 @@ h1 {
     color: #fff;
     font-size: 30px;
 }
-
-input {
-    padding: 10px;
-    margin: 0 20px 20px 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background: #eeeeee25;
-    outline: none;
-}
-
 input::placeholder {
     color: #fffcfc4a;
 }
 
+div:has(input:focus) label {
+    transform: translateY(-31px);
+    padding: 10px 0;
+}
+
 input[type='submit'] {
+    margin: 0 20px 20px 20px;
     border: none;
     background: #f6f2f278;
     /*filter: blur(5px); "boton desactivado "*/
@@ -93,4 +100,9 @@ a {
 .error {
     color: red;
     margin: 0;
+}
+
+.inputUsed {
+    transform: translateY(-30px);
+    padding: 10px 0;
 }
