@@ -23,6 +23,7 @@ main {
 }
 .menu {
     /* menu de navegacion */
+    width: 50px;
     list-style: none;
     padding: 20px;
     padding-bottom: 20px;
@@ -32,11 +33,17 @@ main {
 }
 .lista-menu {
     /* lista de menu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-right: 50px;
     font-size: 20px;
     padding: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
     border-radius: 50px;
-    margin: 10px;
+
     background-color: rgba(255, 255, 255, 0.15);
 }
 .lista-menu:hover {
@@ -44,3 +51,7 @@ main {
     background-color: rgba(255, 255, 255, 0.505);
     cursor: pointer;
 }
+.div-icon {
+    /* icono de menu */
+    width: 30px;
+} /*agregar el nombre alas etiquetas */
