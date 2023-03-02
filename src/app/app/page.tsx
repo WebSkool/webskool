@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import './styles.css'
 
+import hgar from '../../../public/hogar(1).svg'
+
 export default async function App() {
     return (
         <main>
@@ -9,26 +11,44 @@ export default async function App() {
                 <ul className="menu">
                     <li className="lista-menu">
                         <Link href="/app">
-                            {/* <Image
-                                src={pfp.picture.thumbnail}
-                                alt="Picture of the author"
-                                width={50}
-                                height={50}
-                                layout="responsive"
-                            /> */}
-                            Inicio
+                            <div className="div-icon">
+                                {
+                                    <Image
+                                        className="icono"
+                                        src={hgar}
+                                        alt="Picture of the author"
+                                        width={50}
+                                        height={50}
+                                        layout="responsive"
+                                    />
+                                }
+                            </div>
                         </Link>
                     </li>
                     <li className="lista-menu">
                         <Link href="/app">
-                            {/* <Image
-                                src={pfp.picture.thumbnail}
+                            <Image
+                                className="icono"
+                                src={hgar}
                                 alt="Picture of the author"
                                 width={50}
                                 height={50}
                                 layout="responsive"
-                            /> */}
-                            Inicio
+                            />
+                        </Link>
+                    </li>
+                    <li className="lista-menu">
+                        <Link href="/app">
+                            {
+                                <Image
+                                    className="icono"
+                                    src={hgar}
+                                    alt="Picture of the author"
+                                    width={50}
+                                    height={50}
+                                    layout="responsive"
+                                />
+                            }
                         </Link>
                     </li>
                 </ul>
