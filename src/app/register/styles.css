@@ -86,6 +86,11 @@ a {
 }
 
 .inactive {
-    filter: blur(4px);
+    filter: blur(3px);
     pointer-events: none;
+}
+
+.error {
+    color: red;
+    margin: 0;
 }
