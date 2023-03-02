@@ -37,19 +37,22 @@ export default async function App() {
                             />
                         </Link>
                     </li>
+
                     <li className="lista-menu">
-                        <Link href="/app">
-                            {
-                                <Image
-                                    className="icono"
-                                    src={hgar}
-                                    alt="Picture of the author"
-                                    width={50}
-                                    height={50}
-                                    layout="responsive"
-                                />
-                            }
-                        </Link>
+                        <div className="div-icon">
+                            <Link href="/app">
+                                {
+                                    <Image
+                                        className="icono"
+                                        src={hgar}
+                                        alt="Picture of the author"
+                                        width={50}
+                                        height={50}
+                                        layout="responsive"
+                                    />
+                                }
+                            </Link>
+                        </div>
                     </li>
                 </ul>
             </nav>
