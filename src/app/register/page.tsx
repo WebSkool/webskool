@@ -7,6 +7,8 @@ export default function Register() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [repeat, setRepeat] = useState('')
+    const [error, setError] = useState('')
+    const [loading, setLoading] = useState(false)
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -61,7 +63,7 @@ export default function Register() {
                     onChange={(e) => setRepeat(e.target.value)}
                     required
                 />
-                <input type="submit" value="Sign Up" />
+                <input type="submit" value="Sign Up" className={loading ? 'inactive' : ''} disabled={loading} />
                 <p>
                     {'Already have an account? '}
                     <Link href="/login">Sign In</Link>

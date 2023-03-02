@@ -85,3 +85,8 @@ a {
         min-width: 100%;
     }
 }
+
+.inactive {
+    filter: blur(4px);
+    pointer-events: none;
+}
