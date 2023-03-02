@@ -33,7 +33,7 @@ export default async function App() {
                     </li>
                 </ul>
             </nav>
-            <section>a</section>
+            <section></section>
         </main>
     )
 }
