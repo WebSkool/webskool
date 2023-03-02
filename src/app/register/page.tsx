@@ -30,6 +30,7 @@ export default function Register() {
                     alert('Success')
                 }
             })
+            .catch(console.error)
     }
 
     return (
