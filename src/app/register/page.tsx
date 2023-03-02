@@ -36,9 +36,30 @@ export default function Register() {
         <main>
             <form action="/api/signup" onSubmit={handleSubmit} method="post">
                 <h1>Register</h1>
-                <input type="email" name="email" placeholder="email@example.com" value={email} required />
-                <input type="password" name="password" placeholder="***********" value={password} required />
-                <input type="password" name="repeat" placeholder="***********" value={repeat} required />
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="email@example.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="***********"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                />
+                <input
+                    type="password"
+                    name="repeat"
+                    placeholder="***********"
+                    value={repeat}
+                    onChange={(e) => setRepeat(e.target.value)}
+                    required
+                />
                 <input type="submit" value="Sign Up" />
                 <p>
                     {'Already have an account? '}
