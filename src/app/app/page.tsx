@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import './styles.css'
-
+//import de public
 import hgar from '../../../public/hogar(1).svg'
+import horas from '../../../public/despertador.svg'
 
 export default async function App() {
     return (
@@ -27,20 +28,24 @@ export default async function App() {
                     </li>
                     <li className="lista-menu">
                         <Link href="/app">
-                            <Image
-                                className="icono"
-                                src={hgar}
-                                alt="Picture of the author"
-                                width={50}
-                                height={50}
-                                layout="responsive"
-                            />
+                            <div className="div-icon">
+                                {
+                                    <Image
+                                        className="icono"
+                                        src={horas}
+                                        alt="Picture of the author"
+                                        width={50}
+                                        height={50}
+                                        layout="responsive"
+                                    />
+                                }
+                            </div>
                         </Link>
                     </li>
 
                     <li className="lista-menu">
-                        <div className="div-icon">
-                            <Link href="/app">
+                        <Link href="/app">
+                            <div className="div-icon">
                                 {
                                     <Image
                                         className="icono"
@@ -51,12 +56,12 @@ export default async function App() {
                                         layout="responsive"
                                     />
                                 }
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
                     </li>
                 </ul>
             </nav>
-            <section></section>
+            <div className="contenedor-gloval"></div>
         </main>
     )
 }
