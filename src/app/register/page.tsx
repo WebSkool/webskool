@@ -1,6 +1,7 @@
 'use client'
-import Link from 'next/link'
+import { redirect } from 'next/navigation'
 import { useState } from 'react'
+import Link from 'next/link'
 import './styles.css'
 
 export default function Register() {
@@ -11,9 +12,11 @@ export default function Register() {
     const [loading, setLoading] = useState(false)
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        setLoading(true)
         e.preventDefault()
         if (password !== repeat) {
-            alert('Passwords do not match')
+            setError('Passwords do not match')
+            setLoading(false)
             return
         }
         fetch('/api/signup', {
@@ -27,43 +30,67 @@ export default function Register() {
             .then((data) => {
                 console.log(data)
                 if (data.error) {
-                    alert(data.error)
+                    if (data.error.message === 'User already registered') setError('User already registered')
+                    else {
+                        setError('An error occurred')
+                        console.error(data.error)
+                    }
                 } else {
-                    alert('Success')
+                    redirect('/app')
                 }
+                setLoading(false)
             })
-            .catch(console.error)
+            .catch((e) => {
+                console.error(e)
+                setLoading(false)
+            })
     }
 
     return (
         <main>
             <form action="/api/signup" onSubmit={handleSubmit} method="post">
                 <h1>Register</h1>
+                <div>
+                    <label htmlFor="email">email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="email@example.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="password">password</label>
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="***********"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="repeat">repeat password</label>
+                    <input
+                        type="password"
+                        name="repeat"
+                        placeholder="***********"
+                        value={repeat}
+                        onChange={(e) => setRepeat(e.target.value)}
+                        required
+                    />
+                </div>
                 <input
-                    type="email"
-                    name="email"
-                    placeholder="email@example.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
+                    type="submit"
+                    value="Sign Up"
+                    className={loading ? 'inactive' : ''}
+                    // onClick={(e) => setLoading(true)}
+                    disabled={loading}
                 />
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="***********"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                <input
-                    type="password"
-                    name="repeat"
-                    placeholder="***********"
-                    value={repeat}
-                    onChange={(e) => setRepeat(e.target.value)}
-                    required
-                />
-                <input type="submit" value="Sign Up" className={loading ? 'inactive' : ''} disabled={loading} />
+                {error && <p className="error">{error}</p>}
                 <p>
                     {'Already have an account? '}
                     <Link href="/login">Sign In</Link>
