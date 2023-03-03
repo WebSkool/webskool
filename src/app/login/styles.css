@@ -38,7 +38,7 @@ form div {
 form div label {
     position: absolute;
     padding: 10px;
-    transition: 0.5 ease;
+    transition: 0.5s;
 }
 
 input {
