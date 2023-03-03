@@ -1,8 +1,9 @@
-header {
+body {
     min-height: 100vh;
-    animation-name: fondo;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
+    /* animation-name: fondo; */
+    animation: 30s ease 1s infinite fondo;
+    /* transition: ease; */
+    /* animation-iteration-count: infinite; */
 }
 @keyframes fondo {
     0% {

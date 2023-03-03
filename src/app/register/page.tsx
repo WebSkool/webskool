@@ -48,45 +48,66 @@ export default function Register() {
 
     return (
         <main>
-            <form action="/api/signup" onSubmit={handleSubmit} method="post">
+            <form
+                action="/api/signup"
+                onSubmit={handleSubmit}
+                method="post"
+            >
                 <h1>Register</h1>
                 <div>
                     <input
+                        id="email"
                         type="email"
                         name="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
-                    <label htmlFor="email" className={email ? 'inputUsed' : ''}>
+                    <label
+                        htmlFor="email"
+                        className={email ? 'inputUsed' : ''}
+                    >
                         email
                     </label>
                 </div>
                 <div>
                     <input
+                        id="password"
                         type="password"
                         name="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
                     />
-                    <label htmlFor="password" className={password ? 'inputUsed' : ''}>
+                    <label
+                        htmlFor="password"
+                        className={password ? 'inputUsed' : ''}
+                    >
                         password
                     </label>
                 </div>
                 <div>
                     <input
+                        id="repeat"
                         type="password"
                         name="repeat"
                         value={repeat}
                         onChange={(e) => setRepeat(e.target.value)}
                         required
                     />
-                    <label htmlFor="repeat" className={repeat ? 'inputUsed' : ''}>
+                    <label
+                        htmlFor="repeat"
+                        className={repeat ? 'inputUsed' : ''}
+                    >
                         repeat password
                     </label>
                 </div>
-                <input type="submit" value="Sign Up" className={loading ? 'inactive' : ''} disabled={loading} />
+                <input
+                    type="submit"
+                    value="Sign Up"
+                    className={loading ? 'inactive' : ''}
+                    disabled={loading}
+                />
                 {error && <p className="error">{error}</p>}
                 <p>
                     {'Already have an account? '}

@@ -39,10 +39,12 @@ form div label {
     position: absolute;
     padding: 10px;
     transition: 0.5s;
+    z-index: -90;
 }
 
 input {
     padding: 10px;
+    z-index: 1;
     border: 1px solid #ccc;
     border-radius: 5px;
     background: #eeeeee25;
