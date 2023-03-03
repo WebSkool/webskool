@@ -1,8 +1,93 @@
+header {
+    min-height: 100vh;
+    animation-name: fondo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes fondo {
+    0% {
+        background-image: radial-gradient(
+            circle at 111.24% 14.64%,
+            #00579d 0,
+            #0055a5 6.25%,
+            #0053ab 12.5%,
+            #0051af 18.75%,
+            #004eb1 25%,
+            #004ab1 31.25%,
+            #0045af 37.5%,
+            #003fab 43.75%,
+            #1738a5 50%,
+            #442f9d 56.25%,
+            #5c2594 62.5%,
+            #6e1689 68.75%,
+            #7c007e 75%,
+            #870071 81.25%,
+            #900064 87.5%,
+            #960056 93.75%,
+            #990049 100%
+        );
+    }
+    20% {
+        background-image: radial-gradient(
+            circle at 11.1% 72.46%,
+            #009993 0,
+            #0099a2 3.85%,
+            #0099b0 7.69%,
+            #0098be 11.54%,
+            #0097ca 15.38%,
+            #0096d5 19.23%,
+            #0094df 23.08%,
+            #0092e6 26.92%,
+            #008fec 30.77%,
+            #008cf0 34.62%,
+            #0088f2 38.46%,
+            #0083f2 42.31%,
+            #197eef 46.15%,
+            #5578eb 50%,
+            #7572e5 53.85%,
+            #8e6bdc 57.69%,
+            #a263d3 61.54%,
+            #b35cc7 65.38%,
+            #c154bb 69.23%,
+            #cd4dae 73.08%,
+            #d6479f 76.92%,
+            #dd4391 80.77%,
+            #e14082 84.62%,
+            #e44074 88.46%,
+            #e44265 92.31%,
+            #e24657 96.15%,
+            #df4c49 100%
+        );
+    }
+    40% {
+        background-image: radial-gradient(
+            circle at 120.71% 50%,
+            #0044d9 0,
+            #003dd5 12.5%,
+            #0035cf 25%,
+            #002bc8 37.5%,
+            #231cbf 50%,
+            #4f00b5 62.5%,
+            #6900aa 75%,
+            #7c009e 87.5%,
+            #8b0091 100%
+        );
+    }
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
 main {
     /* main */
     position: relative;
     top: 90px;
-    background-color: #b03e3e;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
     padding: 20px;
     margin: 20px;
     border-radius: 5px;
