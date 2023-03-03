@@ -38,7 +38,7 @@ form div {
 form div label {
     position: absolute;
     padding: 10px;
-    transition: 0.5 ease;
+    transition: 0.5s;
 }
 
 input {
@@ -62,6 +62,7 @@ input::placeholder {
 div:has(input:focus) label {
     transform: translateY(-31px);
     padding: 10px 0;
+    transition: 1s;
 }
 
 input[type='submit'] {
