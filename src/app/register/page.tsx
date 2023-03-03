@@ -28,7 +28,6 @@ export default function Register() {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data)
                 if (data.error) {
                     if (data.error.message === 'User already registered') setError('User already registered')
                     else {
@@ -42,6 +41,7 @@ export default function Register() {
             })
             .catch((e) => {
                 console.error(e)
+                setError('An error occurred')
                 setLoading(false)
             })
     }
@@ -86,13 +86,7 @@ export default function Register() {
                         repeat password
                     </label>
                 </div>
-                <input
-                    type="submit"
-                    value="Sign Up"
-                    className={loading ? 'inactive' : ''}
-                    // onClick={(e) => setLoading(true)}
-                    disabled={loading}
-                />
+                <input type="submit" value="Sign Up" className={loading ? 'inactive' : ''} disabled={loading} />
                 {error && <p className="error">{error}</p>}
                 <p>
                     {'Already have an account? '}

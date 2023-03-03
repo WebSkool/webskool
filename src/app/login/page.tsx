@@ -2,10 +2,13 @@
 import './styles.css'
 import Link from 'next/link'
 import { FormEvent, useState } from 'react'
+import { redirect } from 'next/navigation'
 
 export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState('')
 
     const onSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -18,8 +21,23 @@ export default function Login() {
             body: JSON.stringify({ email, password }),
         })
             .then((r) => r.json())
-            .then(console.log)
-            .catch(console.error)
+            .then((data) => {
+                if (data.error) {
+                    if (data.error.message === 'User already registered') setError('User already registered')
+                    else {
+                        setError('An error occurred')
+                        console.error(data.error)
+                    }
+                } else {
+                    redirect('/app')
+                }
+                setLoading(false)
+            })
+            .catch((e) => {
+                console.error(e)
+                setError('An error occurred')
+                setLoading(false)
+            })
     }
 
     return (
@@ -50,7 +68,8 @@ export default function Login() {
                         password
                     </label>
                 </div>
-                <input type="submit" value="Sig In" />
+                <input type="submit" value="Sig In" className={loading ? 'inactive' : ''} disabled={loading} />
+                {error && <p className="error">{error}</p>}
                 <p>
                     {"Don't have an account yet? "}
                     <Link href="/register">Sign Up</Link>
