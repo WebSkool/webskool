@@ -4,7 +4,7 @@ secondary: #2D27FF;
 */
 
 body {
-    background: url(https://cdn.pixabay.com/photo/2016/11/29/04/19/ocean-1867285_960_720.jpg) no-repeat;
+    background: url() no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
@@ -60,7 +60,7 @@ h1 {
 input::placeholder {
     color: #fffcfc4a;
 }
-
+/* lo estoy areglando para que se vea bien */
 div:has(input:focus) label {
     transform: translateY(-31px);
     padding: 10px 0;

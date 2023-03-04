@@ -52,7 +52,10 @@ export default function Login() {
                         name="email"
                         required
                     />
-                    <label htmlFor="email" className={email ? 'inputUsed' : ''}>
+                    <label
+                        htmlFor="email"
+                        className={email ? 'inputUsed' : ''}
+                    >
                         email
                     </label>
                 </div>
@@ -64,11 +67,19 @@ export default function Login() {
                         name="password"
                         required
                     />
-                    <label htmlFor="password" className={password ? 'inputUsed' : ''}>
+                    <label
+                        htmlFor="password"
+                        className={password ? 'inputUsed' : ''}
+                    >
                         password
                     </label>
                 </div>
-                <input type="submit" value="Sig In" className={loading ? 'inactive' : ''} disabled={loading} />
+                <input
+                    type="submit"
+                    value="Sig In"
+                    className={loading ? 'inactive' : ''}
+                    disabled={loading}
+                />
                 {error && <p className="error">{error}</p>}
                 <p>
                     {"Don't have an account yet? "}
