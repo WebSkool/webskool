@@ -4,6 +4,7 @@ import './styles.css'
 //import de public
 import hgar from '../../../public/hogar(1).svg'
 import horas from '../../../public/despertador.svg'
+import User from '../../../public/usuario.svg'
 
 export default async function App() {
     return (
@@ -49,7 +50,7 @@ export default async function App() {
                                 {
                                     <Image
                                         className="icono"
-                                        src={hgar}
+                                        src={User}
                                         alt="Picture of the author"
                                         width={50}
                                         height={50}
