@@ -40,9 +40,8 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     const pfps = await getClasses(30)
 
     return (
-        <html lang="en">
-            <body>
-                {/* <header>/
+        <body>
+            {/* <header>/
                     <ul className="classList">
                         {pfps.map((pfp: any, i) => (
                             <li
@@ -64,8 +63,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
                         ))}
                     </ul>
                 </header> */}
-                {children}
-            </body>
-        </html>
+            {children}
+        </body>
     )
 }

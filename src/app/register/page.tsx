@@ -1,6 +1,6 @@
 'use client'
-import { redirect } from 'next/navigation'
-import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { useState, FormEvent } from 'react'
 import Link from 'next/link'
 import './styles.css'
 
@@ -10,16 +10,17 @@ export default function Register() {
     const [repeat, setRepeat] = useState('')
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
-
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const router = useRouter()
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         setLoading(true)
+        setError('')
         e.preventDefault()
         if (password !== repeat) {
             setError('Passwords do not match')
             setLoading(false)
             return
         }
-        fetch('/api/signup', {
+        fetch('/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -34,25 +35,19 @@ export default function Register() {
                         setError('An error occurred')
                         console.error(data.error)
                     }
-                } else {
-                    redirect('/app')
-                }
-                setLoading(false)
+                    setLoading(false)
+                } else router.replace('/app')
             })
             .catch((e) => {
                 console.error(e)
-                setError('An error occurred')
+                setError('An error occurred!!tec')
                 setLoading(false)
             })
     }
 
     return (
         <main>
-            <form
-                action="/api/signup"
-                onSubmit={handleSubmit}
-                method="post"
-            >
+            <form action="/api/signup" onSubmit={handleSubmit} method="post">
                 <h1>Register</h1>
                 <div>
                     <input
@@ -63,10 +58,7 @@ export default function Register() {
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
-                    <label
-                        htmlFor="email"
-                        className={email ? 'inputUsed' : ''}
-                    >
+                    <label htmlFor="email" className={email ? 'inputUsed' : ''}>
                         email
                     </label>
                 </div>
@@ -79,10 +71,7 @@ export default function Register() {
                         onChange={(e) => setPassword(e.target.value)}
                         required
                     />
-                    <label
-                        htmlFor="password"
-                        className={password ? 'inputUsed' : ''}
-                    >
+                    <label htmlFor="password" className={password ? 'inputUsed' : ''}>
                         password
                     </label>
                 </div>
@@ -95,19 +84,11 @@ export default function Register() {
                         onChange={(e) => setRepeat(e.target.value)}
                         required
                     />
-                    <label
-                        htmlFor="repeat"
-                        className={repeat ? 'inputUsed' : ''}
-                    >
+                    <label htmlFor="repeat" className={repeat ? 'inputUsed' : ''}>
                         repeat password
                     </label>
                 </div>
-                <input
-                    type="submit"
-                    value="Sign Up"
-                    className={loading ? 'inactive' : ''}
-                    disabled={loading}
-                />
+                <input type="submit" value="Sign Up" className={loading ? 'inactive' : ''} disabled={loading} />
                 {error && <p className="error">{error}</p>}
                 <p>
                     {'Already have an account? '}

@@ -4,8 +4,11 @@ import './styles.css'
 //import de public
 import hgar from '../../../public/hogar(1).svg'
 import horas from '../../../public/despertador.svg'
+import { cookies } from 'next/headers'
 
 export default async function App() {
+    const headerList = cookies()
+    console.log(Array.from(headerList))
     return (
         <div className="container">
             <main>
