@@ -64,6 +64,16 @@ export default async function AppLayout({ children }: { children: React.ReactNod
                     </ul>
                 </header> */}
             {children}
+            <div className="burbujas">
+                <div className="burbuja"></div>
+                <div className="burbuja"></div>
+                <div className="burbuja"></div>
+                <div className="burbuja"></div>
+                <div className="burbuja"></div>
+                <div className="burbuja"></div>
+                <div className="burbuja"></div>
+                <div className="burbuja"></div>
+            </div>
         </body>
     )
 }

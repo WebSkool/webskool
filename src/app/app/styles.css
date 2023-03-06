@@ -1,114 +1,75 @@
 body {
     min-height: 100vh;
-    /* animation-name: fondo; */
-    animation: 30s ease 1s infinite fondo;
-    /* transition: ease; */
-    /* animation-iteration-count: infinite; */
+    background: #2f2a2a;
+
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-@keyframes fondo {
+
+/* .burbuja {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #259fcb;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    animation: burbujas 3s linear infinite;
+}
+.burbuja:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-delay: 1s;
+}
+.burbuja:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 20%;
+    animation-delay: 2s;
+}
+.burbuja:nth-child(3) {
+    width: 30px;
+    height: 30px;
+    left: 40%;
+    animation-delay: 3s;
+}
+@keyframes burbujas {
     0% {
-        background-image: radial-gradient(
-            circle at 111.24% 14.64%,
-            #00579d 0,
-            #0055a5 6.25%,
-            #0053ab 12.5%,
-            #0051af 18.75%,
-            #004eb1 25%,
-            #004ab1 31.25%,
-            #0045af 37.5%,
-            #003fab 43.75%,
-            #1738a5 50%,
-            #442f9d 56.25%,
-            #5c2594 62.5%,
-            #6e1689 68.75%,
-            #7c007e 75%,
-            #870071 81.25%,
-            #900064 87.5%,
-            #960056 93.75%,
-            #990049 100%
-        );
+        bottom: 0;
+        opacity: 0;
     }
-    20% {
-        background-image: radial-gradient(
-            circle at 11.1% 72.46%,
-            #009993 0,
-            #0099a2 3.85%,
-            #0099b0 7.69%,
-            #0098be 11.54%,
-            #0097ca 15.38%,
-            #0096d5 19.23%,
-            #0094df 23.08%,
-            #0092e6 26.92%,
-            #008fec 30.77%,
-            #008cf0 34.62%,
-            #0088f2 38.46%,
-            #0083f2 42.31%,
-            #197eef 46.15%,
-            #5578eb 50%,
-            #7572e5 53.85%,
-            #8e6bdc 57.69%,
-            #a263d3 61.54%,
-            #b35cc7 65.38%,
-            #c154bb 69.23%,
-            #cd4dae 73.08%,
-            #d6479f 76.92%,
-            #dd4391 80.77%,
-            #e14082 84.62%,
-            #e44074 88.46%,
-            #e44265 92.31%,
-            #e24657 96.15%,
-            #df4c49 100%
-        );
+    50% {
+        opacity: 0.4;
     }
-    40% {
-        background-image: radial-gradient(
-            circle at 120.71% 50%,
-            #0044d9 0,
-            #003dd5 12.5%,
-            #0035cf 25%,
-            #002bc8 37.5%,
-            #231cbf 50%,
-            #4f00b5 62.5%,
-            #6900aa 75%,
-            #7c009e 87.5%,
-            #8b0091 100%
-        );
+    100% {
+        bottom: 100%;
+        opacity: 0;
     }
-}
+} */
 
 .container {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
-main {
-    /* main */
-    position: relative;
-    top: 90px;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
 .menu-navegacion {
     /* menu de navegacion */
     display: flex;
-    flex-direction: column;
+    width: 109.1px;
     justify-content: space-between;
     align-items: flex-start;
     padding: 10px;
     color: #fff;
     position: relative;
-    right: 60px;
-    top: -20px;
+    right: 12px;
+    top: 40px;
 }
 .menu {
     /* menu de navegacion */
-    width: 50px;
+    width: 33px;
     list-style: none;
     padding: 20px;
     padding-bottom: 20px;
@@ -116,21 +77,20 @@ main {
     backdrop-filter: blur(5px);
     border-radius: 30px;
 }
+
 .lista-menu {
     /* lista de menu */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20%;
-    margin-right: 50px;
+    width: 30%;
     font-size: 20px;
-    padding: 20px;
+    padding: 10px;
     padding-bottom: 10px;
     margin-bottom: 30px;
     border-radius: 50px;
-
-    background-color: rgba(255, 255, 255, 0.15);
 }
+
 .lista-menu:hover {
     /* lista de menu */
     background-color: rgba(255, 255, 255, 0.505);
@@ -142,3 +102,19 @@ main {
 } /*agregar el nombre alas etiquetas */
 
 /* contenedor global */
+
+.contenedor-gloval {
+    margin-top: 90px;
+    position: absolute;
+    top: 90px;
+    left: 20vh;
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: rgba(255, 255, 255, 0.15);
+}
