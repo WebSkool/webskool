@@ -28,19 +28,28 @@ export async function POST(request: NextRequest) {
     const { email, password } = body
 
     const { data, error } = await supabase.auth.signUp({ email, password })
-    if (error?.message)
-        return new Response(JSON.stringify({ error }), {
-            headers: { 'content-type': 'application/json' },
+    if (error?.message) {
+        return new NextResponse(JSON.stringify({ error }), {
             status: 500,
-        })
-    else {
-        const response = new Response(JSON.stringify(data), {
             headers: { 'content-type': 'application/json' },
         })
-        response.headers.set(
-            'Set-Cookie',
-            `token=${data?.session?.access_token}; Path=/; HttpOnly; SameSite=Lax; Secure`,
-        )
+    } else {
+        const response = new NextResponse(JSON.stringify(data), {
+            headers: { 'content-type': 'application/json' },
+        })
+        response.cookies.set('token', data?.session?.access_token ?? '', {
+            path: '/',
+            httpOnly: true,
+            sameSite: 'lax',
+            secure: true,
+            maxAge: data?.session?.expires_in,
+        })
+        response.cookies.set('refresh_token', data?.session?.refresh_token ?? '', {
+            path: '/',
+            httpOnly: true,
+            sameSite: 'lax',
+            secure: true,
+        })
         return response
     }
 }

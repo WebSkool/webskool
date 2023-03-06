@@ -6,8 +6,11 @@ import hgar from '../../../public/hogar(1).svg'
 import horas from '../../../public/despertador.svg'
 import User from '../../../public/usuario.svg'
 import grupos from '../../../public/aplicaciones-anadir.svg'
+import { cookies } from 'next/headers'
 
 export default async function App() {
+    const headerList = cookies()
+    console.log(Array.from(headerList))
     return (
         <div className="container">
             <nav className="menu-navegacion">

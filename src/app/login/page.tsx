@@ -11,6 +11,7 @@ export default function Login() {
     const [error, setError] = useState('')
 
     const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+        setLoading(false)
         e.preventDefault()
         console.log('submit', { email, password })
         fetch('/api/login', {
