@@ -80,11 +80,7 @@ export default async function App() {
                 </ul>
             </nav>
             <div className="contenedor-gloval">
-                <h1>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cupiditate ipsa accusantium quod
-                    animi nulla aliquam modi nostrum deleniti, at, sunt perspiciatis, voluptas suscipit dolore soluta
-                    hic alias atque quisquam.
-                </h1>
+                <span></span>
             </div>
         </div>
     )
