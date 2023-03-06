@@ -1,16 +1,17 @@
-import Link from 'next/link'
+import { cookies } from 'next/headers'
 import Image from 'next/image'
+import Link from 'next/link'
 import './styles.css'
 //import de public
 import hgar from '../../../public/hogar(1).svg'
 import horas from '../../../public/despertador.svg'
 import User from '../../../public/usuario.svg'
 import grupos from '../../../public/aplicaciones-anadir.svg'
-import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 
 export default async function App() {
     const headerList = cookies()
-    console.log(Array.from(headerList))
+    if (!headerList.has('token')) return redirect('/login')
     return (
         <div className="container">
             <nav className="menu-navegacion">

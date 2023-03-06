@@ -3,12 +3,14 @@ import './styles.css'
 import Link from 'next/link'
 import { FormEvent, useState } from 'react'
 import { redirect } from 'next/navigation'
+import { useCookies } from 'react-cookie'
 
 export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
+    const [cookies, setCookie] = useCookies(['token'])
 
     const onSubmit = (e: FormEvent<HTMLFormElement>) => {
         setLoading(false)
@@ -29,10 +31,16 @@ export default function Login() {
                         setError('An error occurred')
                         console.error(data.error)
                     }
+                    setLoading(false)
                 } else {
+                    setCookie('token', data.token, {
+                        httpOnly: true,
+                        sameSite: 'lax',
+                        secure: true,
+                        maxAge: data?.session?.expires_in,
+                    })
                     redirect('/app')
                 }
-                setLoading(false)
             })
             .catch((e) => {
                 console.error(e)
@@ -53,10 +61,7 @@ export default function Login() {
                         name="email"
                         required
                     />
-                    <label
-                        htmlFor="email"
-                        className={email ? 'inputUsed' : ''}
-                    >
+                    <label htmlFor="email" className={email ? 'inputUsed' : ''}>
                         email
                     </label>
                 </div>
@@ -68,19 +73,11 @@ export default function Login() {
                         name="password"
                         required
                     />
-                    <label
-                        htmlFor="password"
-                        className={password ? 'inputUsed' : ''}
-                    >
+                    <label htmlFor="password" className={password ? 'inputUsed' : ''}>
                         password
                     </label>
                 </div>
-                <input
-                    type="submit"
-                    value="Sig In"
-                    className={loading ? 'inactive' : ''}
-                    disabled={loading}
-                />
+                <input type="submit" value="Sig In" className={loading ? 'inactive' : ''} disabled={loading} />
                 {error && <p className="error">{error}</p>}
                 <p>
                     {"Don't have an account yet? "}
