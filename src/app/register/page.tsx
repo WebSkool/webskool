@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation'
 import { useState, FormEvent } from 'react'
 import Link from 'next/link'
 import './styles.css'
+import { useCookies } from 'react-cookie'
 
 export default function Register() {
     const [email, setEmail] = useState('')
@@ -11,6 +12,8 @@ export default function Register() {
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const router = useRouter()
+    const [cookies, setCookie] = useCookies(['token'])
+
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         setLoading(true)
         setError('')
@@ -36,7 +39,15 @@ export default function Register() {
                         console.error(data.error)
                     }
                     setLoading(false)
-                } else router.replace('/app')
+                } else {
+                    setCookie('token', data.token, {
+                        httpOnly: true,
+                        sameSite: 'lax',
+                        secure: true,
+                        maxAge: data?.session?.expires_in,
+                    })
+                    router.replace('/app')
+                }
             })
             .catch((e) => {
                 console.error(e)

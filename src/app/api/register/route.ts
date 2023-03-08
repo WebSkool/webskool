@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server'
 import { type NextRequest } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
-import { cookies } from 'next/headers'
 
 const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL as string,
@@ -38,14 +37,12 @@ export async function POST(request: NextRequest) {
             headers: { 'content-type': 'application/json' },
         })
         response.cookies.set('token', data?.session?.access_token ?? '', {
-            path: '/',
             httpOnly: true,
             sameSite: 'lax',
             secure: true,
             maxAge: data?.session?.expires_in,
         })
         response.cookies.set('refresh_token', data?.session?.refresh_token ?? '', {
-            path: '/',
             httpOnly: true,
             sameSite: 'lax',
             secure: true,
