@@ -118,3 +118,14 @@ body {
     box-shadow: rgba(255, 255, 255, 0.15);
 }
 /* ocultar contenedor-gloval  */
+
+.botton-aburgesa {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    border: none;
+}
+.icono-aburgesa {
+    max-width: 60px;
+    width: 90px;
+}
