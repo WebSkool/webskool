@@ -81,6 +81,22 @@ export default async function App() {
                             </div>
                         </Link>
                     </li>
+                    <li className="lista-menu" id="lagaut">
+                        <Link href="/app">
+                            <div className="div-icon">
+                                {
+                                    <Image
+                                        className="icono"
+                                        src={grupos}
+                                        alt="Picture of the author"
+                                        width={50}
+                                        height={50}
+                                        layout="responsive"
+                                    />
+                                }
+                            </div>
+                        </Link>
+                    </li>
                 </ul>
             </nav>
             <div className="contenedor-gloval">

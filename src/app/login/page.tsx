@@ -2,7 +2,7 @@
 import './styles.css'
 import Link from 'next/link'
 import { FormEvent, useState } from 'react'
-import { redirect } from 'next/navigation'
+import { redirect, useRouter } from 'next/navigation'
 import { useCookies } from 'react-cookie'
 
 export default function Login() {
@@ -11,9 +11,11 @@ export default function Login() {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
     const [cookies, setCookie] = useCookies(['token'])
+    const router = useRouter()
 
     const onSubmit = (e: FormEvent<HTMLFormElement>) => {
         setLoading(false)
+        setError('')
         e.preventDefault()
         console.log('submit', { email, password })
         fetch('/api/login', {
@@ -26,7 +28,7 @@ export default function Login() {
             .then((r) => r.json())
             .then((data) => {
                 if (data.error) {
-                    if (data.error.message === 'User already registered') setError('User already registered')
+                    if (data.error.message === 'Invalid login credentials') setError('Invalid login credentials')
                     else {
                         setError('An error occurred')
                         console.error(data.error)
@@ -39,7 +41,7 @@ export default function Login() {
                         secure: true,
                         maxAge: data?.session?.expires_in,
                     })
-                    redirect('/app')
+                    router.replace('/app')
                 }
             })
             .catch((e) => {
