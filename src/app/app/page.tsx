@@ -114,7 +114,7 @@ export default async function App() {
                     </li>
                 </ul>
             </nav>
-            <div className="contenedor-gloval" id="no-print">
+            <div className="contenedor-gloval">
                 <span></span>
             </div>
         </div>
