@@ -4,57 +4,14 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* burbujas estilos */
-/* .burbuja {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: #259fcb;
-    opacity: 0.3;
-    position: absolute;
-    bottom: 0;
-    left: 5%;
-    animation: burbujas 3s linear infinite;
-}
-.burbuja:nth-child(1) {
-    width: 80px;
-    height: 80px;
-    left: 5%;
-    animation-delay: 1s;
-}
-.burbuja:nth-child(2) {
-    width: 100px;
-    height: 100px;
-    left: 20%;
-    animation-delay: 2s;
-}
-.burbuja:nth-child(3) {
-    width: 30px;
-    height: 30px;
-    left: 40%;
-    animation-delay: 3s;
-}
-@keyframes burbujas {
-    0% {
-        bottom: 0;
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.4;
-    }
-    100% {
-        bottom: 100%;
-        opacity: 0;
-    }
-} */
 
 .container {
-    display: flex;
+   
 
     width: 100%;
 }
 .botton-aburgesa {
-    /* grid-template-columns: 2fr 1fr; */
+   
     display: flex;
     justify-content: center;
     align-items: center;
