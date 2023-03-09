@@ -12,101 +12,101 @@ import Sesion from '../../../public/esquema-del-boton-de-flecha-cuadrada-de-inic
 import aburgesa from '../../../public/cerrar-sesion.png'
 
 export default async function App() {
-    const headerList = cookies()
-    console.log(Array.from(headerList))
+    const cookiesList = cookies()
+    if (!cookiesList.has('token')) return redirect('/login')
     return (
-        <div className="container">
+        <div className='container'>
             {/* botondeaburges */}
-            <div className="conteiner-buton">
-                <button className="botton-aburgesa">
+            <div className='conteiner-buton'>
+                <button className='botton-aburgesa'>
                     <Image
-                        className="icono-aburgesa"
+                        className='icono-aburgesa'
                         src={aburgesa}
-                        alt="Picture of the author"
+                        alt='Picture of the author'
                         width={50}
                         height={50}
-                        layout="responsive"
+                        layout='responsive'
                     />
                 </button>
             </div>
-            <nav className="menu-navegacion">
-                <ul className="menu">
-                    <li className="lista-menu">
-                        <Link href="/app">
-                            <div className="div-icon">
+            <nav className='menu-navegacion'>
+                <ul className='menu'>
+                    <li className='lista-menu'>
+                        <Link href='/app'>
+                            <div className='div-icon'>
                                 {
                                     <Image
-                                        className="icono"
+                                        className='icono'
                                         src={hgar}
-                                        alt="Picture of the author"
+                                        alt='Picture of the author'
                                         width={50}
                                         height={50}
-                                        layout="responsive"
+                                        layout='responsive'
                                     />
                                 }
                             </div>
                         </Link>
                     </li>
-                    <li className="lista-menu">
-                        <Link href="/app">
-                            <div className="div-icon">
+                    <li className='lista-menu'>
+                        <Link href='/app'>
+                            <div className='div-icon'>
                                 {
                                     <Image
-                                        className="icono"
+                                        className='icono'
                                         src={horas}
-                                        alt="Picture of the author"
+                                        alt='Picture of the author'
                                         width={50}
                                         height={50}
-                                        layout="responsive"
+                                        layout='responsive'
                                     />
                                 }
                             </div>
                         </Link>
                     </li>
 
-                    <li className="lista-menu">
-                        <Link href="/app">
-                            <div className="div-icon">
+                    <li className='lista-menu'>
+                        <Link href='/app'>
+                            <div className='div-icon'>
                                 {
                                     <Image
-                                        className="icono"
+                                        className='icono'
                                         src={User}
-                                        alt="Picture of the author"
+                                        alt='Picture of the author'
                                         width={50}
                                         height={50}
-                                        layout="responsive"
+                                        layout='responsive'
                                     />
                                 }
                             </div>
                         </Link>
                     </li>
-                    <li className="lista-menu">
-                        <Link href="/app">
-                            <div className="div-icon">
+                    <li className='lista-menu'>
+                        <Link href='/app'>
+                            <div className='div-icon'>
                                 {
                                     <Image
-                                        className="icono"
+                                        className='icono'
                                         src={grupos}
-                                        alt="Picture of the author"
+                                        alt='Picture of the author'
                                         width={50}
                                         height={50}
-                                        layout="responsive"
+                                        layout='responsive'
                                     />
                                 }
                             </div>
                         </Link>
                     </li>
-                    <li className="lista-menu" id="lagaut">
-                        <Link href="/app">
-                            <div className="div-icon">
+                    <li className='lista-menu' id='lagaut'>
+                        <Link href='/app'>
+                            <div className='div-icon'>
                                 {
                                     <Image
-                                        className="icono"
+                                        className='icono'
                                         src={grupos}
-                                        alt="Picture of the author"
+                                        alt='Picture of the author'
                                         width={50}
                                         height={50}
-                                        layout="responsive"
+                                        layout='responsive'
                                     />
                                 }
                             </div>
@@ -114,7 +114,7 @@ export default async function App() {
                     </li>
                 </ul>
             </nav>
-            <div className="contenedor-gloval" id="no-print">
+            <div className='contenedor-gloval' id='no-print'>
                 <span></span>
             </div>
         </div>
