@@ -17,7 +17,6 @@ export default function Login() {
         setLoading(false)
         setError('')
         e.preventDefault()
-        console.log('submit', { email, password })
         fetch('/api/login', {
             method: 'POST',
             headers: {
@@ -25,8 +24,8 @@ export default function Login() {
             },
             body: JSON.stringify({ email, password }),
         })
-            .then((r) => r.json())
-            .then((data) => {
+            .then(r => r.json())
+            .then(data => {
                 if (data.error) {
                     if (data.error.message === 'Invalid login credentials') setError('Invalid login credentials')
                     else {
@@ -44,7 +43,7 @@ export default function Login() {
                     router.replace('/app')
                 }
             })
-            .catch((e) => {
+            .catch(e => {
                 console.error(e)
                 setError('An error occurred')
                 setLoading(false)
@@ -56,34 +55,28 @@ export default function Login() {
             <form onSubmit={onSubmit}>
                 <h1>Login</h1>
                 <div>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        name="email"
-                        required
-                    />
-                    <label htmlFor="email" className={email ? 'inputUsed' : ''}>
+                    <input type='email' value={email} onChange={e => setEmail(e.target.value)} name='email' required />
+                    <label htmlFor='email' className={email ? 'inputUsed' : ''}>
                         email
                     </label>
                 </div>
                 <div>
                     <input
-                        type="password"
+                        type='password'
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        name="password"
+                        onChange={e => setPassword(e.target.value)}
+                        name='password'
                         required
                     />
-                    <label htmlFor="password" className={password ? 'inputUsed' : ''}>
+                    <label htmlFor='password' className={password ? 'inputUsed' : ''}>
                         password
                     </label>
                 </div>
-                <input type="submit" value="Sig In" className={loading ? 'inactive' : ''} disabled={loading} />
-                {error && <p className="error">{error}</p>}
+                <input type='submit' value='Sig In' className={loading ? 'inactive' : ''} disabled={loading} />
+                {error && <p className='error'>{error}</p>}
                 <p>
                     {"Don't have an account yet? "}
-                    <Link href="/register">Sign Up</Link>
+                    <Link href='/register'>Sign Up</Link>
                 </p>
             </form>
         </main>
