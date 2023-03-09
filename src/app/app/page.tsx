@@ -1,13 +1,14 @@
+import { redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
 import Image from 'next/image'
 import Link from 'next/link'
 import './styles.css'
 //import de public
-import hgar from '../../../public/hogar(1).svg'
-import horas from '../../../public/despertador.svg'
-import User from '../../../public/usuario.svg'
 import grupos from '../../../public/aplicaciones-anadir.svg'
-import { redirect } from 'next/navigation'
+import horas from '../../../public/despertador.svg'
+import hgar from '../../../public/hogar(1).svg'
+import User from '../../../public/usuario.svg'
+import Sesion from '../../../public/esquema-del-boton-de-flecha-cuadrada-de-inicio-de-sesion.png'
 
 export default async function App() {
     const headerList = cookies()
