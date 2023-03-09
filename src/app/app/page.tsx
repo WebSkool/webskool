@@ -15,16 +15,18 @@ export default async function App() {
     return (
         <div className="container">
             {/* botondeaburges */}
-            <button className="botton-aburgesa">
-                <Image
-                    className="icono-aburgesa"
-                    src={aburgesa}
-                    alt="Picture of the author"
-                    width={50}
-                    height={50}
-                    layout="responsive"
-                />
-            </button>
+            <div className="conteiner-buton">
+                <button className="botton-aburgesa">
+                    <Image
+                        className="icono-aburgesa"
+                        src={aburgesa}
+                        alt="Picture of the author"
+                        width={50}
+                        height={50}
+                        layout="responsive"
+                    />
+                </button>
+            </div>
             <nav className="menu-navegacion">
                 <ul className="menu">
                     <li className="lista-menu">
