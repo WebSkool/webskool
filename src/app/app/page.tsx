@@ -9,12 +9,26 @@ import horas from '../../../public/despertador.svg'
 import hgar from '../../../public/hogar(1).svg'
 import User from '../../../public/usuario.svg'
 import Sesion from '../../../public/esquema-del-boton-de-flecha-cuadrada-de-inicio-de-sesion.png'
+import aburgesa from '../../../public/cerrar-sesion.png'
 
 export default async function App() {
     const headerList = cookies()
-    if (!headerList.has('token')) return redirect('/login')
+    console.log(Array.from(headerList))
     return (
         <div className="container">
+            {/* botondeaburges */}
+            <div className="conteiner-buton">
+                <button className="botton-aburgesa">
+                    <Image
+                        className="icono-aburgesa"
+                        src={aburgesa}
+                        alt="Picture of the author"
+                        width={50}
+                        height={50}
+                        layout="responsive"
+                    />
+                </button>
+            </div>
             <nav className="menu-navegacion">
                 <ul className="menu">
                     <li className="lista-menu">
@@ -100,7 +114,7 @@ export default async function App() {
                     </li>
                 </ul>
             </nav>
-            <div className="contenedor-gloval">
+            <div className="contenedor-gloval" id="no-print">
                 <span></span>
             </div>
         </div>

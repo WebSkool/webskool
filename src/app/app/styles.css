@@ -1,11 +1,11 @@
 body {
     min-height: 100vh;
-
+    background: #898484;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-.burbuja {
+/* burbujas estilos */
+/* .burbuja {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -46,18 +46,29 @@ body {
         bottom: 100%;
         opacity: 0;
     }
-}
+} */
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+
+    width: 100%;
+}
+.botton-aburgesa {
+    /* grid-template-columns: 2fr 1fr; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: rgba(255, 255, 255, 0.15);
 }
 
 .menu-navegacion {
     /* menu de navegacion */
     display: flex;
-    width: 109.1px;
+    height: 409.333px;
+    width: 74.1px;
     justify-content: space-between;
     align-items: flex-start;
     padding: 10px;
@@ -112,6 +123,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: rgba(255, 255, 255, 0.15);
+}
+/* ocultar contenedor-gloval  */
+
+.conteiner-buton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 83.783px;
+    height: 72.333px;
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(5px);
     border-radius: 20px;
