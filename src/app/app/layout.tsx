@@ -52,6 +52,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
                                 <Link href={'/app/class/' + i}>
                                     <div className="classpfp">
                                         <Image
+                                            className="icon-list"
                                             src={pfp.picture.thumbnail}
                                             alt="Picture of the author"
                                             width={50}
