@@ -15,98 +15,88 @@ export default async function App() {
     const cookiesList = cookies()
     if (!cookiesList.has('token')) return redirect('/login')
     return (
-        <div className='container'>
-            {/* botondeaburges */}
-            <div className='conteiner-buton'>
-                <button className='botton-aburgesa'>
-                    <Image
-                        className='icono-aburgesa'
-                        src={aburgesa}
-                        alt='Picture of the author'
-                        width={50}
-                        height={50}
-                        layout='responsive'
-                    />
-                </button>
-            </div>
-            <nav className='menu-navegacion'>
-                <ul className='menu'>
-                    <li className='lista-menu'>
-                        <Link href='/app'>
-                            <div className='div-icon'>
+        <div className="container">
+            <nav className="menu-navegacion">
+                <ul className="menu">
+                    <li className="lista-menu">
+                        <Link href="/app">
+                            <div className="div-icon">
                                 {
                                     <Image
-                                        className='icono'
+                                        className="icono"
                                         src={hgar}
-                                        alt='Picture of the author'
+                                        alt="Picture of the author"
                                         width={50}
                                         height={50}
-                                        layout='responsive'
+                                        layout="responsive"
                                     />
                                 }
                             </div>
                         </Link>
                     </li>
-                    <li className='lista-menu'>
-                        <Link href='/app'>
-                            <div className='div-icon'>
+                    <li className="lista-menu">
+                        <Link href="/app">
+                            <div className="div-icon">
                                 {
                                     <Image
-                                        className='icono'
+                                        className="icono"
                                         src={horas}
-                                        alt='Picture of the author'
+                                        alt="Picture of the author"
                                         width={50}
                                         height={50}
-                                        layout='responsive'
+                                        layout="responsive"
                                     />
                                 }
                             </div>
                         </Link>
                     </li>
 
-                    <li className='lista-menu'>
-                        <Link href='/app'>
-                            <div className='div-icon'>
+                    <li className="lista-menu">
+                        <Link href="/app">
+                            <div className="div-icon">
                                 {
                                     <Image
-                                        className='icono'
+                                        className="icono"
                                         src={User}
-                                        alt='Picture of the author'
+                                        alt="Picture of the author"
                                         width={50}
                                         height={50}
-                                        layout='responsive'
+                                        layout="responsive"
                                     />
                                 }
                             </div>
                         </Link>
                     </li>
-                    <li className='lista-menu'>
-                        <Link href='/app'>
-                            <div className='div-icon'>
+                    <li className="lista-menu">
+                        <Link href="/app">
+                            <div className="div-icon">
                                 {
                                     <Image
-                                        className='icono'
+                                        className="icono"
                                         src={grupos}
-                                        alt='Picture of the author'
+                                        alt="Picture of the author"
                                         width={50}
                                         height={50}
-                                        layout='responsive'
+                                        layout="responsive"
                                     />
                                 }
                             </div>
                         </Link>
                     </li>
-                    <li className='lista-menu' id='lagaut'>
-                        <Link href='/app'>
-                            <div className='div-icon'>
+                    <li
+                        className="lista-menu"
+                        id="lagaut"
+                    >
+                        <Link href="/app">
+                            <div className="div-icon">
                                 {
                                     <Image
-                                        className='icono'
+                                        className="icono"
                                         src={grupos}
-                                        alt='Picture of the author'
+                                        alt="Picture of the author"
                                         width={50}
                                         height={50}
-                                        layout='responsive'
+                                        layout="responsive"
                                     />
                                 }
                             </div>
