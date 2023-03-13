@@ -2,40 +2,32 @@
     margin: 0;
     padding: 0;
 }
-header {
-  height: 100%;
-}
-
 
 body {
     display: flex;
+    flex-direction: row;
     max-width: 100vw;
+    min-width: 100vw;
     max-height: 100vh;
-    height: 100vh;
-    margin: 0;
-}
-/* estilos de la lista de contactos */
-.classList {
-    display: flex;
-    flex-direction: column;
-    background-color: aqua;
-    list-style: none;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    overflow: hidden;
-}
-/* estilos de cada contacto */
-.classicon >a {
-    height: 64px;
-    width: 64px;
-    border-radius: 20px;
-}
-/* estilos de la imagen de perfil */
-.icon-list {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    min-height: 100vh;
     overflow: hidden;
 }
 
+/* estilos de la lista de contactos */
+header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    padding: 10px;
+    overflow: hidden;
+    gap: 10px;
+}
+
+/* estilos de cada contacto */
+header > a {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+}

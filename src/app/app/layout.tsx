@@ -30,7 +30,7 @@ interface RandomApi {
 }
 
 const getClasses = async (limit = 5) => {
-    const pfps = (await fetch('https://randomuser.me/api/?results=' + limit).then((response) =>
+    const pfps = (await fetch('https://randomuser.me/api/?results=' + limit).then(response =>
         response.json(),
     )) as RandomApi
     return pfps.results
@@ -41,31 +41,20 @@ export default async function AppLayout({ children }: { children: React.ReactNod
 
     return (
         <body>
-            {
-                <header>
-                    <ul className="classList">
-                        {pfps.map((pfp: any, i) => (
-                            <li
-                                className="classicon"
-                                key={i}
-                            >
-                                <Link href={'/app/class/' + i}>
-                                   
-                                        <Image
-                                            className="icon-list"
-                                            src={pfp.picture.thumbnail}
-                                            alt="Picture of the author"
-                                            width={50}
-                                            height={50}
-                                            layout="responsive"
-                                        />
-                                   
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </header>
-            }
+            <header>
+                {pfps.map((pfp: any, i) => (
+                    <Link key={i} href={'/app/class/' + i}>
+                        <Image
+                            className='icon-list'
+                            src={pfp.picture.thumbnail}
+                            alt='Picture of the author'
+                            width={50}
+                            height={50}
+                            layout='responsive'
+                        />
+                    </Link>
+                ))}
+            </header>
             {children}
         </body>
     )
