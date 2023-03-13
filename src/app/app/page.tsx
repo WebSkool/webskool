@@ -3,14 +3,17 @@ import { cookies } from 'next/headers'
 import Image from 'next/image'
 import Link from 'next/link'
 import './styles.css'
-//import de public
-import grupos from '../../../public/aplicaciones-anadir.svg'
-import horas from '../../../public/despertador.svg'
-import hgar from '../../../public/hogar(1).svg'
-import User from '../../../public/usuario.svg'
-import Sesion from '../../../public/esquema-del-boton-de-flecha-cuadrada-de-inicio-de-sesion.png'
-import aburgesa from '../../../public/cerrar-sesion.png'
 import { headers } from 'next/headers'
+
+//import de public
+// iconos de la pagina del proyecto = https://www.iconfinder.com/search/icons?family=feather
+import grupos from '../../../public/calendario0.1.png'
+import horas from '../../../public/tareas.png'
+import hgar from '../../../public/home_icon.png'
+import User from '../../../public/cuenta.png'
+import Sesion from '../../../public/apagado.png'
+// import aburgesa from '../../../public/cerrar-sesion.png'
+
 
 export default async function App() {
     const cookiesList = cookies()
@@ -35,6 +38,7 @@ export default async function App() {
                                         layout='responsive'
                                     />
                                 }
+                                <span>inicio</span>
                             </div>
                         </Link>
                     </li>
@@ -51,6 +55,7 @@ export default async function App() {
                                         layout='responsive'
                                     />
                                 }
+                                <span>inicio</span>
                             </div>
                         </Link>
                     </li>
@@ -68,6 +73,7 @@ export default async function App() {
                                         layout='responsive'
                                     />
                                 }
+                                <span>inicio</span>
                             </div>
                         </Link>
                     </li>
@@ -84,6 +90,7 @@ export default async function App() {
                                         layout='responsive'
                                     />
                                 }
+                                <span>inicio</span>
                             </div>
                         </Link>
                     </li>
@@ -93,19 +100,20 @@ export default async function App() {
                                 {
                                     <Image
                                         className='icono'
-                                        src={grupos}
+                                        src={Sesion}
                                         alt='Picture of the author'
                                         width={50}
                                         height={50}
                                         layout='responsive'
                                     />
                                 }
+                                <span>inicio</span>
                             </div>
                         </Link>
                     </li>
                 </ul>
             </nav>
-            <div className='contenedor-gloval'>
+            <main className='contenedor-gloval'>
                 <span></span>
             </main>
             <aside className=''>
