@@ -1,6 +1,6 @@
 .container {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
     width: 100%;
 }
 .botton-aburgesa {
@@ -17,15 +17,15 @@
 .menu-navegacion {
     /* menu de navegacion */
     display: flex;
-   
     justify-content: space-between;
     align-items: flex-start;
+    background-color: #252424;
     padding: 10px;
     color: #fff;
 }
 .menu {
     /* menu de navegacion */
-    width: 33px;
+    
     list-style: none;
     padding: 20px;
     padding-bottom: 20px;
@@ -46,28 +46,22 @@
     margin-bottom: 30px;
     border-radius: 50px;
 }
-
-.lista-menu:hover {
-    /* lista de menu */
-    background-color: rgba(255, 255, 255, 0.505);
-    cursor: pointer;
+a{
+    text-decoration: none;
+    color: #000000;
+    
 }
-.div-icon {
-    /* icono de menu */
-    width: 30px;
-} /*agregar el nombre alas etiquetas */
-
-/* contenedor global */
-
-main {
+.div-icon{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    position: absolute;
-    width: 70%;
-    height: 50%;
-    top: 5vh;
-    left: 15vw;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
+    gap: 10px;
+   
+    
 }
+span{
+    font-size: 20px;
+
+   
+}
+
