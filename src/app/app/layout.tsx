@@ -50,7 +50,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
                                 key={i}
                             >
                                 <Link href={'/app/class/' + i}>
-                                    <div className="classpfp">
+                                   
                                         <Image
                                             className="icon-list"
                                             src={pfp.picture.thumbnail}
@@ -59,7 +59,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
                                             height={50}
                                             layout="responsive"
                                         />
-                                    </div>
+                                   
                                 </Link>
                             </li>
                         ))}

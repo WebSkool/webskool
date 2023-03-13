@@ -89,23 +89,3 @@ a {
     color: #fff;
 }
 
-@media screen and (max-width: 400px) {
-    form {
-        min-width: 100%;
-    }
-}
-
-.inactive {
-    filter: blur(3px);
-    pointer-events: none;
-}
-
-.error {
-    color: red;
-    margin: 0;
-}
-
-.inputUsed {
-    transform: translateY(-30px);
-    padding: 10px 0;
-}
