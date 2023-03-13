@@ -29,7 +29,7 @@ export default async function App() {
                                     <Image
                                         className='icono'
                                         src={hgar}
-                                        alt='Picture of the author'
+                                        alt='app'
                                         width={50}
                                         height={50}
                                         layout='responsive'
@@ -45,7 +45,7 @@ export default async function App() {
                                     <Image
                                         className='icono'
                                         src={horas}
-                                        alt='Picture of the author'
+                                        alt='tareas'
                                         width={50}
                                         height={50}
                                         layout='responsive'
@@ -62,7 +62,7 @@ export default async function App() {
                                     <Image
                                         className='icono'
                                         src={User}
-                                        alt='Picture of the author'
+                                        alt='usuario'
                                         width={50}
                                         height={50}
                                         layout='responsive'
@@ -78,7 +78,7 @@ export default async function App() {
                                     <Image
                                         className='icono'
                                         src={grupos}
-                                        alt='Picture of the author'
+                                        alt='calendario'
                                         width={50}
                                         height={50}
                                         layout='responsive'
@@ -94,7 +94,7 @@ export default async function App() {
                                     <Image
                                         className='icono'
                                         src={grupos}
-                                        alt='Picture of the author'
+                                        alt='cerrar'
                                         width={50}
                                         height={50}
                                         layout='responsive'
@@ -105,12 +105,10 @@ export default async function App() {
                     </li>
                 </ul>
             </nav>
-            <div className='contenedor-gloval'>
+            <main>
                 <span></span>
             </main>
-            <aside className=''>
-
-            </aside>
+            <aside className=''></aside>
         </div>
     )
 }

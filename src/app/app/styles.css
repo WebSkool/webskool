@@ -23,7 +23,6 @@
     align-items: flex-start;
     padding: 10px;
     color: #fff;
-
 }
 .menu {
     /* menu de navegacion */
@@ -61,7 +60,7 @@
 
 /* contenedor global */
 
-.contenedor-gloval {
+main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,6 +72,3 @@
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(5px);
 }
-
-
-

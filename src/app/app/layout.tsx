@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import './globals.css'
+import grupos from '../../../public/aplicaciones-anadir.svg'
 
 interface RandomApi {
     results: {
@@ -42,6 +43,16 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     return (
         <body>
             <header>
+                <Link href='/app/new/class/'>
+                    <Image
+                        className='icon-list'
+                        src={grupos}
+                        alt='Create Class'
+                        width={50}
+                        height={50}
+                        layout='responsive'
+                    />
+                </Link>
                 {pfps.map((pfp: any, i) => (
                     <Link key={i} href={'/app/class/' + i}>
                         <Image
