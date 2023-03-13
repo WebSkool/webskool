@@ -30,8 +30,8 @@ export default function Register() {
             },
             body: JSON.stringify({ email, password }),
         })
-            .then((res) => res.json())
-            .then((data) => {
+            .then(res => res.json())
+            .then(data => {
                 if (data.error) {
                     if (data.error.message === 'User already registered') setError('User already registered')
                     else {
@@ -49,7 +49,7 @@ export default function Register() {
                     router.replace('/app')
                 }
             })
-            .catch((e) => {
+            .catch(e => {
                 console.error(e)
                 setError('An error occurred!!tec')
                 setLoading(false)
@@ -58,52 +58,52 @@ export default function Register() {
 
     return (
         <main>
-            <form action="/api/signup" onSubmit={handleSubmit} method="post">
+            <form action='/api/signup' onSubmit={handleSubmit} method='post'>
                 <h1>Register</h1>
                 <div>
                     <input
-                        id="email"
-                        type="email"
-                        name="email"
+                        id='email'
+                        type='email'
+                        name='email'
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={e => setEmail(e.target.value)}
                         required
                     />
-                    <label htmlFor="email" className={email ? 'inputUsed' : ''}>
+                    <label htmlFor='email' className={email ? 'inputUsed' : ''}>
                         email
                     </label>
                 </div>
                 <div>
                     <input
-                        id="password"
-                        type="password"
-                        name="password"
+                        id='password'
+                        type='password'
+                        name='password'
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={e => setPassword(e.target.value)}
                         required
                     />
-                    <label htmlFor="password" className={password ? 'inputUsed' : ''}>
+                    <label htmlFor='password' className={password ? 'inputUsed' : ''}>
                         password
                     </label>
                 </div>
                 <div>
                     <input
-                        id="repeat"
-                        type="password"
-                        name="repeat"
+                        id='repeat'
+                        type='password'
+                        name='repeat'
                         value={repeat}
-                        onChange={(e) => setRepeat(e.target.value)}
+                        onChange={e => setRepeat(e.target.value)}
                         required
                     />
-                    <label htmlFor="repeat" className={repeat ? 'inputUsed' : ''}>
+                    <label htmlFor='repeat' className={repeat ? 'inputUsed' : ''}>
                         repeat password
                     </label>
                 </div>
-                <input type="submit" value="Sign Up" className={loading ? 'inactive' : ''} disabled={loading} />
-                {error && <p className="error">{error}</p>}
+                <input type='submit' value='Sign Up' className={loading ? 'inactive' : ''} disabled={loading} />
+                {error && <p className='error'>{error}</p>}
                 <p>
                     {'Already have an account? '}
-                    <Link href="/login">Sign In</Link>
+                    <Link href='/login'>Sign In</Link>
                 </p>
             </form>
         </main>

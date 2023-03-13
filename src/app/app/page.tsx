@@ -10,93 +10,94 @@ import hgar from '../../../public/hogar(1).svg'
 import User from '../../../public/usuario.svg'
 import Sesion from '../../../public/esquema-del-boton-de-flecha-cuadrada-de-inicio-de-sesion.png'
 import aburgesa from '../../../public/cerrar-sesion.png'
+import { headers } from 'next/headers'
 
 export default async function App() {
     const cookiesList = cookies()
+    const headersList = headers()
     if (!cookiesList.has('token')) return redirect('/login')
+    console.log('mobile? ', headersList.get('user-agent')?.includes('Mobile'))
+
     return (
-        <div className="container">
-            <nav className="menu-navegacion">
-                <ul className="menu">
-                    <li className="lista-menu">
-                        <Link href="/app">
-                            <div className="div-icon">
+        <div className='container'>
+            <nav className='menu-navegacion'>
+                <ul className='menu'>
+                    <li className='lista-menu'>
+                        <Link href='/app'>
+                            <div className='div-icon'>
                                 {
                                     <Image
-                                        className="icono"
+                                        className='icono'
                                         src={hgar}
-                                        alt="Picture of the author"
+                                        alt='Picture of the author'
                                         width={50}
                                         height={50}
-                                        layout="responsive"
+                                        layout='responsive'
                                     />
                                 }
                             </div>
                         </Link>
                     </li>
-                    <li className="lista-menu">
-                        <Link href="/app">
-                            <div className="div-icon">
+                    <li className='lista-menu'>
+                        <Link href='/app'>
+                            <div className='div-icon'>
                                 {
                                     <Image
-                                        className="icono"
+                                        className='icono'
                                         src={horas}
-                                        alt="Picture of the author"
+                                        alt='Picture of the author'
                                         width={50}
                                         height={50}
-                                        layout="responsive"
+                                        layout='responsive'
                                     />
                                 }
                             </div>
                         </Link>
                     </li>
 
-                    <li className="lista-menu">
-                        <Link href="/app">
-                            <div className="div-icon">
+                    <li className='lista-menu'>
+                        <Link href='/app'>
+                            <div className='div-icon'>
                                 {
                                     <Image
-                                        className="icono"
+                                        className='icono'
                                         src={User}
-                                        alt="Picture of the author"
+                                        alt='Picture of the author'
                                         width={50}
                                         height={50}
-                                        layout="responsive"
+                                        layout='responsive'
                                     />
                                 }
                             </div>
                         </Link>
                     </li>
-                    <li className="lista-menu">
-                        <Link href="/app">
-                            <div className="div-icon">
+                    <li className='lista-menu'>
+                        <Link href='/app'>
+                            <div className='div-icon'>
                                 {
                                     <Image
-                                        className="icono"
+                                        className='icono'
                                         src={grupos}
-                                        alt="Picture of the author"
+                                        alt='Picture of the author'
                                         width={50}
                                         height={50}
-                                        layout="responsive"
+                                        layout='responsive'
                                     />
                                 }
                             </div>
                         </Link>
                     </li>
-                    <li
-                        className="lista-menu"
-                        id="lagaut"
-                    >
-                        <Link href="/app">
-                            <div className="div-icon">
+                    <li className='lista-menu' id='lagaut'>
+                        <Link href='/app'>
+                            <div className='div-icon'>
                                 {
                                     <Image
-                                        className="icono"
+                                        className='icono'
                                         src={grupos}
-                                        alt="Picture of the author"
+                                        alt='Picture of the author'
                                         width={50}
                                         height={50}
-                                        layout="responsive"
+                                        layout='responsive'
                                     />
                                 }
                             </div>
@@ -104,7 +105,7 @@ export default async function App() {
                     </li>
                 </ul>
             </nav>
-            <div className="contenedor-gloval">
+            <div className='contenedor-gloval'>
                 <span></span>
             </div>
         </div>
