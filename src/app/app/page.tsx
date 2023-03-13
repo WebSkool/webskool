@@ -3,14 +3,16 @@ import { cookies } from 'next/headers'
 import Image from 'next/image'
 import Link from 'next/link'
 import './styles.css'
-//import de public
-import grupos from '../../../public/aplicaciones-anadir.svg'
-import horas from '../../../public/despertador.svg'
-import hgar from '../../../public/hogar(1).svg'
-import User from '../../../public/usuario.svg'
-import Sesion from '../../../public/esquema-del-boton-de-flecha-cuadrada-de-inicio-de-sesion.png'
-import aburgesa from '../../../public/cerrar-sesion.png'
 import { headers } from 'next/headers'
+
+//import de public
+// iconos de la pagina del proyecto = https://www.iconfinder.com/search/icons?family=feather
+import grupos from '../../../public/calendario0.1.png'
+import horas from '../../../public/tareas.png'
+import hgar from '../../../public/home_icon.png'
+import User from '../../../public/cuenta.png'
+import Sesion from '../../../public/apagado.png'
+// import aburgesa from '../../../public/cerrar-sesion.png'
 
 export default async function App() {
     const cookiesList = cookies()
@@ -25,81 +27,76 @@ export default async function App() {
                     <li className='lista-menu'>
                         <Link href='/app'>
                             <div className='div-icon'>
-                                {
-                                    <Image
-                                        className='icono'
-                                        src={hgar}
-                                        alt='app'
-                                        width={50}
-                                        height={50}
-                                        layout='responsive'
-                                    />
-                                }
+                                <Image
+                                    className='icono'
+                                    src={hgar}
+                                    alt='app'
+                                    width={50}
+                                    height={50}
+                                    layout='responsive'
+                                />
+                                <span>inicio</span>
                             </div>
                         </Link>
                     </li>
                     <li className='lista-menu'>
-                        <Link href='/app'>
+                        <Link href='/app/tasks'>
                             <div className='div-icon'>
-                                {
-                                    <Image
-                                        className='icono'
-                                        src={horas}
-                                        alt='tareas'
-                                        width={50}
-                                        height={50}
-                                        layout='responsive'
-                                    />
-                                }
+                                <Image
+                                    className='icono'
+                                    src={horas}
+                                    alt='tareas'
+                                    width={50}
+                                    height={50}
+                                    layout='responsive'
+                                />
+                                <span>inicio</span>
                             </div>
                         </Link>
                     </li>
 
                     <li className='lista-menu'>
-                        <Link href='/app'>
+                        <Link href='/app/user'>
                             <div className='div-icon'>
-                                {
-                                    <Image
-                                        className='icono'
-                                        src={User}
-                                        alt='usuario'
-                                        width={50}
-                                        height={50}
-                                        layout='responsive'
-                                    />
-                                }
+                                <Image
+                                    className='icono'
+                                    src={User}
+                                    alt='usuario'
+                                    width={50}
+                                    height={50}
+                                    layout='responsive'
+                                />
+                                <span>inicio</span>
                             </div>
                         </Link>
                     </li>
                     <li className='lista-menu'>
-                        <Link href='/app'>
+                        <Link href='/app/calendar'>
                             <div className='div-icon'>
-                                {
-                                    <Image
-                                        className='icono'
-                                        src={grupos}
-                                        alt='calendario'
-                                        width={50}
-                                        height={50}
-                                        layout='responsive'
-                                    />
-                                }
+                                <Image
+                                    className='icono'
+                                    src={grupos}
+                                    alt='calendario'
+                                    width={50}
+                                    height={50}
+                                    layout='responsive'
+                                />
+                                <span>inicio</span>
                             </div>
                         </Link>
                     </li>
-                    <li className='lista-menu' id='lagaut'>
-                        <Link href='/app'>
+                    <li className='lista-menu'>
+                        <Link href='/api/logout'>
                             <div className='div-icon'>
-                                {
-                                    <Image
-                                        className='icono'
-                                        src={grupos}
-                                        alt='cerrar'
-                                        width={50}
-                                        height={50}
-                                        layout='responsive'
-                                    />
-                                }
+                                <Image
+                                    className='icono'
+                                    src={Sesion}
+                                    alt='Picture of the author'
+                                    width={50}
+                                    height={50}
+                                    layout='responsive'
+                                />
+                                <span>inicio</span>
                             </div>
                         </Link>
                     </li>
@@ -108,7 +105,7 @@ export default async function App() {
             <main>
                 <span></span>
             </main>
-            <aside className=''></aside>
+            <aside></aside>
         </div>
     )
 }

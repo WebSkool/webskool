@@ -17,8 +17,7 @@
 .menu-navegacion {
     /* menu de navegacion */
     display: flex;
-    height: 409.333px;
-    width: 74.1px;
+   
     justify-content: space-between;
     align-items: flex-start;
     padding: 10px;
