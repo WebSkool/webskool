@@ -104,9 +104,12 @@ export default async function App() {
                     </li>
                 </ul>
             </nav>
-            <div className="contenedor-gloval">
+            <main className="contenedor-gloval">
                 <span></span>
-            </div>
+            </main>
+            <aside className=''>
+                
+            </aside>
         </div>
     )
 }

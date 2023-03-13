@@ -8,6 +8,8 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: row;
     width: 100%;
 }
 .botton-aburgesa {
@@ -30,9 +32,7 @@ body {
     align-items: flex-start;
     padding: 10px;
     color: #fff;
-    position: relative;
-    right: 12px;
-    top: 40px;
+
 }
 .menu {
     /* menu de navegacion */
@@ -77,81 +77,11 @@ body {
     position: absolute;
     width: 70%;
     height: 50%;
-    top: 50vh;
+    top: 5vh;
     left: 15vw;
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(5px);
 }
-/* ocultar contenedor-gloval  */
 
-/*estilos de movil*/
-@media screen and (max-width: 460px) {
-    .menu-navegacion {
-        /* menu de navegacion */
-        display: flex;
-        height: 409.333px;
-        width: 74.1px;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 10px;
-        color: #fff;
-        position: relative;
-        right: 12px;
-        top: 40px;
-    }
-    .menu {
-        /* menu de navegacion */
-        width: 33px;
-        list-style: none;
-        padding: 20px;
-        padding-bottom: 20px;
-        background-color: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(5px);
-        border-radius: 30px;
-    }
-    .lista-menu {
-        /* lista de menu */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 30%;
-        font-size: 20px;
-        padding: 10px;
-        padding-bottom: 10px;
-        margin-bottom: 30px;
-        border-radius: 50px;
-    }
-    .lista-menu:hover {
-        /* lista de menu */
-        background-color: rgba(255, 255, 255, 0.505);
-        cursor: pointer;
-    }
-    .div-icon {
-        /* icono de menu */
-        width: 30px;
-    } /*agregar el nombre alas etiquetas */
-    /* contenedor global */
-    .contenedor-gloval {
-        position: absolute;
-        top: 20vh;
-        left: 20vh;
-        width: 70%;
-        height: 50%;
-        background-color: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(5px);
-        border-radius: 20px;
-        box-shadow: rgba(255, 255, 255, 0.15);
-    }
-    /* ocultar contenedor-gloval  */
-    .conteiner-buton {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 83.783px;
-        height: 72.333px;
-        background-color: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(5 px);
-        border-radius: 20px;
-        box-shadow: rgba(255, 255, 255, 0.15);
-    }
-}
+
+
