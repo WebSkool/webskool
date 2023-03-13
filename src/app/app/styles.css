@@ -1,4 +1,6 @@
 body {
+    display: flex;
+    flex-direction: row;
     min-height: 100vh;
     background: #898484;
     background-repeat: no-repeat;
