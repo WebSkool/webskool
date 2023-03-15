@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+div {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+    height: 100%;
+}
