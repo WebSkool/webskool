@@ -1,8 +1,6 @@
 import { redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
 
-import './styles.css'
-
 import Menu from './Menu'
 
 export default async function App() {
@@ -10,12 +8,21 @@ export default async function App() {
     if (!cookiesList.has('token')) return redirect('/login')
 
     return (
-        <div className='container'>
-            <Menu />
-            <main>
-                <span></span>
-            </main>
-            <aside></aside>
-        </div>
+        <>
+            <div>
+                <Menu />
+                <main>
+                    <span></span>
+                </main>
+                <aside></aside>
+            </div>
+            <style jsx>{`
+                div {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr 1fr;
+                    width: 100%;
+                }
+            `}</style>
+        </>
     )
 }
