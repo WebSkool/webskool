@@ -1,7 +1,5 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import ClassList from './ClassList'
 import './globals.css'
-import grupos from '../../../public/aplicaciones-anadir.svg'
 
 interface RandomApi {
     results: {
@@ -19,7 +17,11 @@ interface RandomApi {
         phone: any
         cell: any
         id: any
-        picture: any
+        picture: {
+            large: string
+            medium: string
+            thumbnail: string
+        }
         nat: any
     }[]
     info: {
@@ -38,34 +40,10 @@ const getClasses = async (limit = 5) => {
 }
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
-    const pfps = await getClasses(30)
-
+    const classes = (await getClasses(15)).map((p, i) => ({ icon: p.picture.large, id: i + '', name: i + '' }))
     return (
         <body>
-            <header>
-                <Link href='/app/new/class/'>
-                    <Image
-                        className='icon-list'
-                        src={grupos}
-                        alt='Create Class'
-                        width={50}
-                        height={50}
-                        layout='responsive'
-                    />
-                </Link>
-                {pfps.map((pfp: any, i) => (
-                    <Link key={i} href={'/app/class/' + i}>
-                        <Image
-                            className='icon-list'
-                            src={pfp.picture.thumbnail}
-                            alt='Picture of the author'
-                            width={50}
-                            height={50}
-                            layout='responsive'
-                        />
-                    </Link>
-                ))}
-            </header>
+            <ClassList classes={classes} />
             {children}
         </body>
     )

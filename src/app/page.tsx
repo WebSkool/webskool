@@ -8,7 +8,7 @@ export default function Home() {
                 <nav>
                     <ul>
                         <li>
-                            <Link href="/login">login</Link>
+                            <Link href='/login'>login</Link>
                         </li>
                     </ul>
                 </nav>
