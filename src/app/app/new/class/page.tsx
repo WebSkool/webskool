@@ -1,6 +1,5 @@
-import './styles.css'
+import './page.css'
 
 export default function NewClass() {
-    // new class view
     return <main>new class</main>
 }

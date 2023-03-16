@@ -1,0 +1,31 @@
+/* estilos de la lista de contactos */
+header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    overflow-y: scroll;
+}
+
+/* Oculta el scrollbar en Chrome, Safari y Opera */
+header::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+header::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+header::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border: none;
+}
+
+/* estilos de cada contacto */
+header > a {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+}

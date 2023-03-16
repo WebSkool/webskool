@@ -1,0 +1,64 @@
+nav {
+    /* menu de navegacion */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.089);
+    backdrop-filter: blur(50px);
+    /* background-image: ; */
+    color: #fff;
+}
+
+nav > ul {
+    /* menu de navegacion */
+    list-style: none;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+nav > ul > li {
+    /* lista de menu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    font-size: 20px;
+    padding: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-radius: 50px;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+nav > ul > li > a > img {
+    width: 3rem;
+}
+
+nav > ul > li > a > span {
+    font-size: 20px;
+}
+
+/* #0d0e1a (Azul oscuro)
+#262b43 (Azul)
+#4a4f6d (Azul claro)
+#7e7fa5 (Morado claro)
+#b0aee9 (Morado)
+#d7d5f5 (Morado claro) */
+
+/* Azul oscuro: #1E2432
+Azul medio: #2B3649
+Azul claro: #475266
+Púrpura oscuro: #5C527F
+Púrpura medio: #7D6C9B
+Púrpura claro: #A691BA */
