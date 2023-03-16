@@ -11,4 +11,5 @@ body {
     max-height: 100vh;
     min-height: 100vh;
     overflow: hidden;
+    background-color: #313338;
 }

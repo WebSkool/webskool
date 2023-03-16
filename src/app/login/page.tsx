@@ -1,5 +1,5 @@
 'use client'
-import './styles.css'
+import './page.css'
 import Link from 'next/link'
 import { FormEvent, useState } from 'react'
 import { redirect, useRouter } from 'next/navigation'

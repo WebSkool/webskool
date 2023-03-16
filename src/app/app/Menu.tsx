@@ -7,6 +7,8 @@ import hgar from '../../../public/home_icon.png'
 import User from '../../../public/cuenta.png'
 import Sesion from '../../../public/apagado.png'
 
+import './Menu.css'
+
 // iconos de la pagina del proyecto = https://www.iconfinder.com/search/icons?family=feather
 
 export default function Menu() {
@@ -46,53 +48,6 @@ export default function Menu() {
                     </li>
                 </ul>
             </nav>
-            <style jsx>{`
-                nav {
-                    /* menu de navegacion */
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                    background-color: #252424;
-                    padding: 10px;
-                    color: #fff;
-                }
-
-                ul {
-                    /* menu de navegacion */
-                    list-style: none;
-                    padding: 20px;
-                    padding-bottom: 20px;
-                    background-color: rgba(255, 255, 255, 0.15);
-                    backdrop-filter: blur(5px);
-                    border-radius: 30px;
-                }
-
-                li {
-                    /* lista de menu */
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 30%;
-                    font-size: 20px;
-                    padding: 10px;
-                    padding-bottom: 10px;
-                    margin-bottom: 30px;
-                    border-radius: 50px;
-                }
-
-                a {
-                    text-decoration: none;
-                    color: #000000;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    gap: 10px;
-                }
-
-                span {
-                    font-size: 20px;
-                }
-            `}</style>
         </>
     )
 }
