@@ -31,13 +31,19 @@ export default function Home() {
                 <div>
                     <h1>webskool</h1>
                     <div>
-                        <Link href='/login'>login</Link>
-                        <Link href='/register'>register</Link>
+                        <Link href="/login">login</Link>
+                        <Link href="/register">register</Link>
                     </div>
                 </div>
             </div>
             <article>
-                <Image src={image} alt='Picture of the author' width={50} height={50} layout='responsive' />
+                <Image
+                    src={image}
+                    alt="Picture of the author"
+                    width={50}
+                    height={50}
+                    layout="responsive"
+                />
                 <div>
                     {/* pense que dijo que ni sabe lo que sabe */}
                     <h1 className={righteous.className}>inicio</h1>
@@ -56,7 +62,13 @@ export default function Home() {
                         aperiam recusandae.
                     </p>
                 </div>
-                <Image src={image} alt='Picture of the author' width={50} height={50} layout='responsive' />
+                <Image
+                    src={image}
+                    alt="Picture of the author"
+                    width={50}
+                    height={50}
+                    layout="responsive"
+                />
             </article>
         </main>
     )

@@ -26,6 +26,9 @@ nav a {
 }
 
 /* estoes el estilo de el jamon */
+main {
+    background: #121a31;
+}
 main > div {
     display: flex;
     justify-content: center;
