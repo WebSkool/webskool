@@ -35,8 +35,17 @@ export default function Home() {
                     <li>novedades</li>
                     <li>contacto</li>
                 </ul>
-                <div></div>
             </nav>
+            <div>
+                <div>
+                    <h1>webskool</h1>
+                    <a href="#">login</a>
+                    <a href="#">register</a>
+                </div>
+            </div>
+            <div>
+                <h1 className={righteous.className}></h1>
+            </div>
             <article>
                 <Image
                     src={image}

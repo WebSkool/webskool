@@ -27,6 +27,17 @@ nav a {
 }
 
 /* estoes el estilo de el jamon */
+main div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #c5c1c1;
+    background-image: url(https://cdn.pixabay.com/photo/2023/03/11/11/19/bird-7844233_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 90px;
+}
 main {
     display: flex;
     justify-content: center;
