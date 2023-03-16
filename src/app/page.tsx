@@ -31,7 +31,7 @@ export default function Home() {
                 <div>
                     <h1>webskool</h1>
                     <div>
-                        <a href="#">login</a>
+                        <a href="https://www.youtube.com/watch?v=mCdA4bJAGGk">login</a>
                         <a href="#">register</a>
                     </div>
                 </div>
