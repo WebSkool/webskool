@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
+import './page.css'
 
 import Menu from './Menu'
 
@@ -9,20 +10,13 @@ export default async function App() {
 
     return (
         <>
-            <div>
+            <div className='main'>
                 <Menu />
                 <main>
                     <span></span>
                 </main>
                 <aside></aside>
             </div>
-            <style jsx>{`
-                div {
-                    display: grid;
-                    grid-template-columns: 1fr 2fr 1fr;
-                    width: 100%;
-                }
-            `}</style>
         </>
     )
 }

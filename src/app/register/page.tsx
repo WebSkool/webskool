@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation'
 import { useState, FormEvent } from 'react'
 import Link from 'next/link'
-import './styles.css'
+import './page.css'
 import { useCookies } from 'react-cookie'
 
 export default function Register() {

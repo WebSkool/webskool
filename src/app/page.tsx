@@ -21,15 +21,6 @@ export default function Home() {
     return (
         <main>
             <nav>
-                <div className="logo-icon">
-                    {/* <Image
-                        src={}
-                        alt="Picture of the author"
-                        width={50}
-                        height={50}
-                        layout="responsive"
-                    /> */}
-                </div>
                 <ul>
                     <li>inicio</li>
                     <li>novedades</li>
@@ -39,12 +30,11 @@ export default function Home() {
             <div>
                 <div>
                     <h1>webskool</h1>
-                    <a href="#">login</a>
-                    <a href="#">register</a>
+                    <div>
+                        <Link href="/login">login</Link>
+                        <Link href="/register">register</Link>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <h1 className={righteous.className}></h1>
             </div>
             <article>
                 <Image
@@ -55,6 +45,7 @@ export default function Home() {
                     layout="responsive"
                 />
                 <div>
+                    {/* pense que dijo que ni sabe lo que sabe */}
                     <h1 className={righteous.className}>inicio</h1>
 
                     <p>
